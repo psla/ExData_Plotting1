@@ -12,7 +12,7 @@ par(mfrow = c(2, 2))
 plot(hpcFiltered$datetime, hpcFiltered$Global_active_power, xlab = "", ylab = "Global Active Power", type = "l")
 
 # graph 2
-plot(hpcFiltered$datetime, hpcFiltered$Voltage, type = "l", ylab = "Voltage")
+plot(hpcFiltered$datetime, hpcFiltered$Voltage, type = "l", ylab = "Voltage", xlab = "datetime")
 
 # graph 3
 plot(hpcFiltered$datetime, hpcFiltered$Sub_metering_1, type = "n", ylab = "Energy sub metering", xlab = "")
@@ -22,7 +22,7 @@ lines(hpcFiltered$datetime, hpcFiltered$Sub_metering_3, col = "blue")
 legend("topright", lwd = 1, col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 
 # graph 4
-plot(hpcFiltered$datetime, hpcFiltered$Global_reactive_power, type = "l", ylab = "Global_reactive_power")
+plot(hpcFiltered$datetime, hpcFiltered$Global_reactive_power, type = "l", ylab = "Global_reactive_power", xlab = "datetime")
 
 
 dev.off()
